@@ -1,0 +1,264 @@
+.container {
+    
+    width: 1170px;
+    margin:　0 auto;
+    
+}
+header {
+    height: 100px;
+    width: 1170px;
+    background-color:rgba(207, 233, 243, 0.9);
+    
+    /*スクロールしてもヘッダーが常に上部に固定されているように
+    position: fixed;
+    top:0;
+    z-index: 10;*/
+}
+
+li {
+    list-style: none;
+
+}
+
+.header-logo {
+    float: left;
+    padding: 10px 20px 15px 10px ;
+}
+
+.contact {
+    float: right;
+    font-size: 25px;
+    padding-right: 20px;
+}
+/*header h1にflat:leftにするのではなく、header-title全体をleftにすると2段になった*/
+.header-title  {
+    float: left;
+}
+.title-list li {
+    float: left;
+    padding-right: 75px;
+    font-family: century;
+}
+.title-list li:hover {
+    opacity: 0.5;
+}
+
+.header-title h1 {
+    font-size: 25px;
+}
+/*ここまでヘッダーの調整*/
+/*ここからbody*/
+
+/*スライド参考url→https://qiita.com/ryoo_ss/items/6908deb084be0aaabed6*/
+.container {overflow: hidden;} /* はみ出す部分を見えなくする */
+:root {
+    --numOfListA: 4; /* リストAのimgタグの数 */
+    --imgW: 900px; /* ここで画像の横幅を指定、px指定を推奨 */
+    --imgH: 500px; /* ここで画像の縦幅を指定、px指定を推奨 */
+    --mBetweenImg: 50px; /* ここで画像間の余白を指定。px指定を推奨 */
+  }
+  .slider-container {
+    display: flex; /* 画像を横並びにする */
+    font-size: 0; /* 余計な余白を削除 */
+    animation: slideshow 15s linear infinite;
+  }
+  .slider-img {
+    width: var(--imgW);
+    height:  var(--imgH);
+  }
+  .slider-img + .slider-img {margin-left: var(--mBetweenImg);}
+  @keyframes slideshow {100% {transform: translateX(calc((var(--numOfListA) * var(--imgW) + var(--mBetweenImg) * var(--numOfListA)) * -1));}} /* 下で説明 */
+  /*ここまでスライドcss*/
+
+  .menu-wrapper {
+    height: 300px;
+    padding-bottom: 80px;
+    background-color: #7f7f7;
+    /*.menu-wrapperを中央寄せ*/
+    text-align:center;
+  }
+
+.menu-wrapper {
+    padding-top: 80px;
+}
+.menu-heading {
+    padding: 0.5em 1em;
+    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+    color: #FFF;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+}
+
+.menu-heading h2 {
+    /*枠の幅調整*/
+    margin: 10px; 
+    padding: 10px;
+}
+
+  .menu-icon {
+      float: left;
+      width: 25%;
+      padding-top: 50px;
+     
+  }
+  /*ここまでメニュー構成*/
+
+  /*ここからインフォメーション構成*/
+  .information-wrapper {
+    height: 300px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background-color: #7f7f7;
+    /*.menu-wrapperを中央寄せ*/
+    text-align:center; 
+  }
+
+  .information-heading {
+    padding: 0.5em 1em;
+    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+    color: #FFF;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+} 
+
+.information-heading h2 {
+  /*枠の幅調整*/
+   margin: 10px; 
+   padding: 10px;
+}
+
+.information-icon {
+    float: left;
+    width: 33%;
+    padding-top: 50px;
+}
+.information P:hover {
+    opacity: 0.5;
+}
+/*ここまでインフォメーション構成*/
+/*ここから公式sns構成*/
+.sns-wrapper {
+    height: 200px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background-color: #7f7f7;
+    /*.menu-wrapperを中央寄せ*/
+    text-align:center; 
+}
+
+.sns-heading {
+    padding: 0.5em 1em;
+    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+    color: #FFF;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+}
+.sns-heading h2 {
+/*枠の幅調整*/
+margin: 10px; 
+padding: 10px;
+}
+
+.btn {
+    /*paddingでボダンの長さ高さ調整*/
+    padding: 15px 40px 15px 40px;
+    color: white;
+    display: inline-block;    
+    opacity: 0.8;
+    /*ボタンに丸みを*/
+    border-radius: 4px;
+}
+/*ボタンにカーソルを合わせた時にボタンの色を濃く*/
+.btn:hover {
+    opacity: 1;
+}
+
+.facebook {
+    background-color: #3b5998;
+    /*ボダン同士の間隔調整*/
+    margin-right: 40px;
+    
+}
+.twitter {
+    background-color: #55acee;
+    /*ボダン同士の間隔調整*/
+    margin-right: 40px;
+}
+.line {
+    background-color: rgba(10, 250, 30, 0.774);
+    margin-right: 40px;
+}
+.instagram {
+    background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    /*overflow:hidden;*/
+}
+
+.btn-wrapper {
+    /*ボタンと文字との間隔調整*/
+    margin: 50px 0 20px 0;
+    
+}
+/*ここから公式sns構成*/
+
+/*ここからアクセス*/
+.access-wrapper {
+    height: 400px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background-color: #7f7f7;
+}
+
+.access-heading {
+    padding: 0.5em 1em;
+    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+    color: #FFF;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+    text-align:center;
+}
+/*店舗情報*/
+.access-left {
+    float: left;
+    margin-top: 40px;
+    margin-left: 60px;
+}
+/*マップ*/
+.access-right {
+    float:right;
+    margin-top: 60px;
+    margin-right: 60px;
+}
+
+/*ここからfooter*/
+footer {
+    height: 250px;
+    width: 1170px;
+    background-color:rgba(22, 82, 105, 0.9);
+}
+
+.company  p {
+    text-align:center; 
+}
+
+.allstores {
+    text-align:center;
+}
+/*各店舗の店舗名にマウスを合わせた時に文字の色を変える*/
+.stores  li :hover {
+    color: white;
+    opacity: 0.7;
+}
+
+.stores {
+    /*text-align:center;*/
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height:40px
+   
+}
